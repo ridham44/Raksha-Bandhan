@@ -15,21 +15,22 @@ const stats = [
 
 export default function PersonalityReport() {
   return (
-    <section id="analysis" className="py-32 px-6 md:px-12 lg:px-24 bg-white/40">
+    <section id="analysis" className="py-24 md:py-32 px-5 md:px-12 lg:px-24 bg-white/40">
       <div className="max-w-6xl mx-auto">
         
-        <div className="flex flex-col md:flex-row items-end justify-between mb-16">
+        <div className="flex flex-col md:flex-row items-end justify-between mb-12 md:mb-16">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
+            className="w-full text-center md:text-left"
           >
             <p className="text-[10px] tracking-[0.25em] uppercase text-muted mb-4 font-medium">
               Volume V &mdash; Metrics
             </p>
             <h2 className="text-4xl md:text-5xl font-heading font-light text-foreground">
-              Sister <span className="italic text-luxury-primary">Overview</span>
+              Sister <span className="italic text-luxury-primary block sm:inline mt-1 sm:mt-0">Overview</span>
             </h2>
           </motion.div>
           <motion.div 
@@ -43,7 +44,7 @@ export default function PersonalityReport() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {stats.map((stat, i) => (
             <motion.div
               key={i}
@@ -51,17 +52,17 @@ export default function PersonalityReport() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="bg-white rounded-[24px] p-6 border border-black/5 shadow-[0_4px_20px_rgba(0,0,0,0.02)] flex flex-col justify-between h-40 hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-shadow duration-300"
+              className="bg-white rounded-[20px] md:rounded-[24px] p-5 md:p-6 border border-black/5 shadow-[0_4px_20px_rgba(0,0,0,0.02)] flex flex-col justify-between h-36 md:h-40 hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-shadow duration-300"
             >
               <div className="flex items-start justify-between">
                 <span className={clsx("p-2 rounded-full bg-foreground/5", stat.color)}>
                   {stat.icon}
                 </span>
-                <span className="text-3xl font-light text-foreground">{stat.value}</span>
+                <span className="text-2xl md:text-3xl font-light text-foreground">{stat.value}</span>
               </div>
               <div>
-                <p className="text-sm font-medium text-foreground mb-1">{stat.label}</p>
-                <p className="text-[10px] uppercase tracking-widest text-muted">{stat.sub}</p>
+                <p className="text-xs md:text-sm font-medium text-foreground mb-1">{stat.label}</p>
+                <p className="text-[9px] md:text-[10px] uppercase tracking-widest text-muted">{stat.sub}</p>
               </div>
             </motion.div>
           ))}

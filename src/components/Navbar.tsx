@@ -36,17 +36,17 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
       className={clsx(
-        "fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-700 h-14 px-8 flex items-center justify-between rounded-full",
-        scrolled ? "glass-pill border-white/40 shadow-sm" : "bg-transparent"
+        "fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-700 h-12 md:h-14 px-6 md:px-8 flex items-center justify-between rounded-full w-[90%] max-w-[400px] md:w-auto",
+        scrolled ? "glass-pill border-white/40 shadow-sm bg-white/70" : "bg-transparent"
       )}
     >
-      <nav className="flex items-center gap-8">
+      <nav className="flex items-center justify-between w-full md:gap-8">
         {navItems.map((item) => (
           <a
             key={item.name}
             href={item.href}
             onClick={(e) => scrollToSection(e, item.href)}
-            className="text-[10px] uppercase tracking-[0.2em] font-medium text-foreground/70 hover:text-luxury-primary transition-colors duration-300"
+            className="flex items-center justify-center h-12 px-2 text-[9px] md:text-[10px] uppercase tracking-[0.15em] md:tracking-[0.2em] font-medium text-foreground/70 hover:text-luxury-primary active:scale-95 transition-all duration-300"
           >
             {item.name}
           </a>

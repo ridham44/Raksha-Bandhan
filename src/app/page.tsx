@@ -16,7 +16,7 @@ export default function Home() {
       <Background />
       <Navbar />
       
-      <div className="relative z-10 flex flex-col gap-12 lg:gap-32">
+      <div className="relative z-10 flex flex-col gap-12 md:gap-24 lg:gap-32 w-full pt-16 md:pt-24 pb-[env(safe-area-inset-bottom)]">
         <Hero />
         <PromiseCard />
         <Gallery />

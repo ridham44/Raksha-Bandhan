@@ -19,16 +19,16 @@ export default function Hero() {
             Volume I &mdash; A Digital Gift
           </p>
           
-          <h1 className="text-6xl md:text-7xl lg:text-[110px] font-heading font-light text-foreground leading-[0.9] tracking-tight mb-8">
-            Happy <br />
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[110px] font-heading font-light text-foreground leading-[1.1] md:leading-[0.9] tracking-tight mb-6 md:mb-8 break-words">
+            Happy <br className="hidden md:block" />
             <span className="italic text-luxury-primary">Raksha Bandhan</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-muted font-light max-w-md leading-relaxed mb-12">
+          <p className="text-base md:text-xl text-muted font-light max-w-[280px] sm:max-w-md leading-relaxed mb-10 md:mb-12">
             A luxury editorial collection of memories and promises for my favourite sister, <span className="font-medium text-foreground">Kavya</span>.
           </p>
 
-          <button className="glass-pill px-8 py-4 text-xs uppercase tracking-widest text-foreground font-medium hover:bg-white/60 transition-all duration-300">
+          <button className="glass-pill px-8 min-h-[52px] text-[11px] uppercase tracking-widest text-foreground font-medium hover:bg-white/60 active:scale-95 transition-all duration-300">
             Explore Collection
           </button>
         </motion.div>

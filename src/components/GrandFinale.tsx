@@ -37,7 +37,7 @@ export default function GrandFinale() {
     <section 
       id="finale" 
       ref={sectionRef} 
-      className="relative min-h-screen flex items-center justify-center py-32 px-6"
+      className="relative min-h-screen flex items-center justify-center py-24 md:py-32 px-5 md:px-6 pb-[env(safe-area-inset-bottom)]"
     >
       {/* Background Image with Heavy Vignette */}
       <div className="absolute inset-0 z-0">
@@ -47,7 +47,7 @@ export default function GrandFinale() {
           fill 
           className="object-cover object-top"
         />
-        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-background/85 md:bg-background/80 backdrop-blur-md md:backdrop-blur-sm" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50" />
       </div>
 
@@ -57,7 +57,7 @@ export default function GrandFinale() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
           transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-          className="text-xs uppercase tracking-widest text-foreground/50 mb-12 font-medium"
+          className="text-[10px] md:text-xs uppercase tracking-[0.2em] md:tracking-widest text-foreground/60 mb-8 md:mb-12 font-medium"
         >
           Volume VI &mdash; The Letter
         </motion.p>
@@ -66,7 +66,7 @@ export default function GrandFinale() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 40 }}
           transition={{ duration: 2, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-          className="font-heading text-2xl md:text-4xl leading-relaxed whitespace-pre-wrap text-foreground font-light"
+          className="font-heading text-xl sm:text-2xl md:text-4xl leading-loose md:leading-relaxed whitespace-pre-wrap text-foreground font-light px-2 md:px-0"
         >
           Dear Kavya,
           <br /><br />
@@ -77,10 +77,10 @@ export default function GrandFinale() {
           initial={{ opacity: 0 }}
           animate={{ opacity: isInView ? 1 : 0 }}
           transition={{ duration: 2, ease: [0.16, 1, 0.3, 1], delay: 1.5 }}
-          className="mt-20 flex flex-col items-center"
+          className="mt-16 md:mt-20 flex flex-col items-center"
         >
-          <p className="text-sm tracking-widest text-muted uppercase mb-4">Love Always,</p>
-          <p className="font-handwriting text-5xl md:text-6xl text-luxury-primary">Your Brother</p>
+          <p className="text-[10px] md:text-sm tracking-[0.2em] text-muted uppercase mb-3 md:mb-4">Love Always,</p>
+          <p className="font-handwriting text-4xl md:text-6xl text-luxury-primary">Your Brother</p>
         </motion.div>
 
       </div>

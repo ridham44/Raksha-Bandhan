@@ -4,16 +4,16 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const photos = [
-  { src: "/images/her pic 3.jpeg", alt: "Solo 1", className: "col-span-12 md:col-span-7 h-[50vh] md:h-[70vh]" },
-  { src: "/images/together3.jpeg", alt: "Together 3", className: "col-span-12 md:col-span-5 h-[40vh] md:h-[70vh] md:mt-16" },
-  { src: "/images/seilfe 4.jpeg", alt: "Selfie 4", className: "col-span-12 md:col-span-4 h-[40vh] md:h-[50vh]" },
-  { src: "/images/her pic 6.jpeg", alt: "Solo 6", className: "col-span-12 md:col-span-4 h-[40vh] md:h-[60vh] md:-mt-12" },
-  { src: "/images/together 2.jpeg", alt: "Together 2", className: "col-span-12 md:col-span-4 h-[40vh] md:h-[50vh] md:mt-12" },
+  { src: "/images/her pic 3.jpeg", alt: "Solo 1", className: "col-span-12 md:col-span-7 aspect-[4/5] md:aspect-auto md:h-[70vh]" },
+  { src: "/images/together3.jpeg", alt: "Together 3", className: "col-span-12 md:col-span-5 aspect-[4/5] md:aspect-auto md:h-[70vh] md:mt-16" },
+  { src: "/images/seilfe 4.jpeg", alt: "Selfie 4", className: "col-span-12 md:col-span-4 aspect-square md:aspect-auto md:h-[50vh]" },
+  { src: "/images/her pic 6.jpeg", alt: "Solo 6", className: "col-span-12 md:col-span-4 aspect-[3/4] md:aspect-auto md:h-[60vh] md:-mt-12" },
+  { src: "/images/together 2.jpeg", alt: "Together 2", className: "col-span-12 md:col-span-4 aspect-square md:aspect-auto md:h-[50vh] md:mt-12" },
 ];
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="py-32 px-6 md:px-12 lg:px-24">
+    <section id="gallery" className="py-24 md:py-32 px-5 md:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto">
         
         <motion.div 
@@ -21,13 +21,13 @@ export default function Gallery() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-20"
+          className="mb-16 md:mb-20 text-center md:text-left"
         >
-          <p className="text-[10px] tracking-[0.25em] uppercase text-muted mb-4 font-medium text-center md:text-left">
+          <p className="text-[10px] tracking-[0.25em] uppercase text-muted mb-4 font-medium">
             Volume II &mdash; Memory Lane
           </p>
-          <h2 className="text-4xl md:text-6xl font-heading font-light text-foreground text-center md:text-left">
-            A Gallery of <span className="italic text-luxury-primary">Us</span>
+          <h2 className="text-4xl md:text-6xl font-heading font-light text-foreground break-words">
+            A Gallery of <span className="italic text-luxury-primary block sm:inline mt-1 sm:mt-0">Us</span>
           </h2>
         </motion.div>
 
